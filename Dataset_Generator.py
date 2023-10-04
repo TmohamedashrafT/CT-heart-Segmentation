@@ -29,10 +29,8 @@ class Dataset_Generator(Dataset):
   def load_ind(self,img_path,mask_path):
         img      = cv2.imread(img_path)
         mask     = cv2.imread(mask_path,0)
-        if img is None:
-          assert f'{img_path} not founded'
-        if mask is None:
-          assert f'{img_path} not founded'
+        assert  img is not None ,f' {img_path} not founded' 
+        assert  mask is not None ,f'{mask_path} not founded' 
         return img,mask
 
   def img_path(self,img_dir,mask_dir):
