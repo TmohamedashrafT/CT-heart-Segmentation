@@ -5,12 +5,13 @@ import cv2
 from torch.utils.data import DataLoader
 from utils import aug_imgs
 import numpy as np
-class Dataset_Generator:
+class Dataset_Generator(Dataset):
   def __init__(self,
                imgs_path,
                masks_paths,
                img_size,
                data_aug=True):
+    super().__init__(Dataset_Generator)
     self.img_files,self.mask_files = self.img_path(imgs_path,masks_paths)
     self.img_size    = img_size
     self.data_aug    = data_aug
