@@ -11,7 +11,7 @@ class Dataset_Generator(Dataset):
                masks_paths,
                img_size,
                data_aug=True):
-    super(segment_model, self).__init__()
+    super().__init__()
     self.img_files,self.mask_files = self.img_path(imgs_path,masks_paths)
     self.img_size    = img_size
     self.data_aug    = data_aug
