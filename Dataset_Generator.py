@@ -2,7 +2,7 @@ import torch
 import glob
 from pathlib import Path
 import cv2
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Dataset
 from utils import aug_imgs
 import numpy as np
 class Dataset_Generator(Dataset):
